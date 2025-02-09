@@ -1,0 +1,25 @@
+Eclipse中导入运行
+1. 导入 git 项目
+Eclipse中，
+
+鼠标右键
+Import
+Git > Projects form Git
+Clone URI
+Source Git Repository 中，将URI这一栏粘贴上 :
+https://gitee.com/leimingyun/wm_demo
+下面的Host、Repository Path将会自动填充
+一路Next、、Finish
+2. 将git导入的项目转为Maven项目
+在git导入的项目wm_demo上右键
+Configure > Convert to Maven Project （注意，这个有的Eclipse版本会在第一步导入git项目时就自动转换为maven了，如果发现这里没有这个选项，那这一步直接忽略过去即可。）
+等待转换完成（注意，maven下载jar包过程中，一定不要打断）
+3. 运行 com.xnx3.Application 即可运行项目
+可在 com.xnx3.Application 这个类上，鼠标右键 —> Debug As —> Java Application 即可运行起来。
+
+3. 访问 /login.do 进行使用
+访问 http://localhost:8080/login.do
+默认的管理员账号跟密码都是 admin
+
+视频演示
+https://video.leimingyun.com/dev/eclipse_gitimport_wangmarket.mov
