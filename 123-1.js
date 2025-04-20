@@ -1,138 +1,138 @@
-                                rows: 2
-                            "card-class": "h-[136px] md:min-h-[244px]",
-                            "cover-size-class": "h-[110px] w-[110px] md:h-[196px] md:w-[196px]",
-                            "cover-size-class": "h-[110px] w-[110px] md:h-[196px] md:w-[196px]",
-                            "cover-size-class": "xl:h-[170px] xl:w-[170px] lg:h-[110px] lg:w-[110px] h-[80px] w-[80px]",
-                            "icon-size-class-with-time": "md:mt-[40px] mt-[30px]",
-                            "icon-size-class-with-time": "md:mt-[40px] mt-[30px]",
-                            "icon-size-class-with-time": "md:mt-[40px] mt-[30px]",
-                            "icon-size-class-with-time": "mt-[35px]",
-                            "icon-size-class": "w-6 h-6 md:h-10 md:w-10",
-                            "icon-size-class": "w-6 h-6 md:h-10 md:w-10",
-                            "icon-size-class": "w-6 h-6 md:h-10 md:w-10",
-                            "icon-size-class": "xl:h-10 xl:w-10 lg:w-6 lg:h-6 w-4 h-4",
-                            "img-url": le(e),
-                            "is-icon": !0,
-                            "mb-[6px] sm:mb-2": s(N)
-                            "platform-name": e.name
-                            "play-member": e == null ? void 0 : e.playMember
-                            "text-margin-class": "xl:my-[10px] lg:my-[5px] my-[3px]",
-                            "text-size-class": "xl:text-[12px] text-[10px]",
-                            }
-                            class: "!top-[-15px]"
-                            class: "absolute md:top-[20px] top-[15px] right-[5px]",
-                            class: "absolute top-[17px] left-0 rounded-tl-[8px] rounded-br-[8px]"
-                            class: "xl:!top-[-10px] lg:!top-[-20px] !top-[-15px]"
-                            class: d(["h-full max-h-[250px]", !le(e) && "min-h-[100px] xl:min-h-[150px]"]),
-                            class: d(["h-full", [e != null && e.isMaintenance ? "game-blur" : "cursor-pointer"]]),
-                            class: d(["relative h-full", e != null && e.isMaintenance ? "cursor-not-allowed" : "cursor-pointer"])
-                            class: d(["w-[110px] md:w-[196px] relative h-full", e != null && e.isMaintenance ? "cursor-not-allowed" : "cursor-pointer"])
-                            class: d(["w-[110px] md:w-[196px] relative h-full", e != null && e.isMaintenance ? "cursor-not-allowed" : "cursor-pointer"]),
-                            class: d(["w-full h-full", (e == null ? void 0 : e.isMaintenance) && "game-blur"]),
-                            class: d(["w-full", [e != null && e.isMaintenance ? "game-blur" : "cursor-pointer"]]),
-                            class: d([e != null && e.isMaintenance ? "game-blur" : "cursor-pointer"]),
-                            fill: a
-                            game: e,
-                            game: e,
-                            game: e,
-                            grid: {
-                            info: e
-                            info: e
-                            info: e,
-                            info: e,
-                            item: e
-                            key: 0,
-                            key: 0,
-                            key: 0,
-                            key: 0,
-                            key: 0,
-                            key: 1,
-                            key: 1,
-                            key: 1,
-                            key: 2,
-                            onClick: Z => s(q)(s(k), e)
-                            onClick: Z => s(q)(s(k), e)
-                            onClick: Z => s(q)(s(k), e)
-                            onClick: Z => we(e)
-                            ref_for: !0,
-                            ref_key: "gameItemContainer",
-                            ref: T
-                            rounded: "10px",
-                            rows: C,
-                            slidesPerView: 3
-                            slidesPerView: 3,
-                            slidesPerView: 4
-                            slidesPerView: 5
-                            slidesPerView: 6
-                            spaceBetween: 6,
-                        _: 2
-                        _: 2
-                        _: 2
-                        _: 2
-                        ...X,
-                        "bottom-[5px] items-center md:items-baseline": !s(v)
-                        "h-[191px] sm:h-[272px] md:h-[341px] 2md:h-[244px]": !s(v),
-                        "is-video": s(v)
-                        "max-h-[280px] md:max-h-[508px]": !((Se = (Me = a.list) == null ? void 0 : Me[0]) != null && Se.useRecommend) && a.mobileGameNum <= 6,
-                        "max-h-[479px] sm:max-h-[559px] md:max-h-[869px] 2md:max-h-[508px]": ((Ie = (Ce = a.list) == null ? void 0 : Ce[0]) == null ? void 0 : Ie.type) === "image" && a.mobileGameNum <= 6,
-                        "mb-2.5 md:w-[calc((100%-32px)/3)]": a.pcPlatformNum > 4
-                        "md:flex flex-wrap": a.pcPlatformNum > 4
-                        "md:ml-2.5": a.useSwiper && P(a.prefix)
-                        "opacity-50 !cursor-not-allowed": be(e)
-                        "video-image-show-sidebar": s(_),
-                        "video-name-bar": s(v),
-                        "video-recommend": ((Te = (ze = a.list) == null ? void 0 : ze[0]) == null ? void 0 : Te.type) === "video" && a.mobileGameNum <= 6
-                        }
-                        }
-                        },
-                        },
-                        },
-                        },
-                        }, [e ? (o(),
-                        }, [O(ve, {
-                        }, [O(ve, {
-                        }, [s(v).customPlatformCard ? Le(a.$slots, "customPlatformCard", {
-                        }, null, 8, ["class", "img-url", "platform-name"]))], 10, fa), e != null && e.isMaintenance ? (o(),
-                        }, null, 8, ["game", "class", "onClick"]), e != null && e.isMaintenance ? (o(),
-                        }, null, 8, ["game", "class", "onClick"]), e != null && e.isMaintenance ? (o(),
-                        }, null, 8, ["game", "class", "onClick"])) : p("", !0), e != null && e.isMaintenance ? (o(),
-                        }, null, 8, ["info"])) : p("", !0), s($)(e.demoSupported, e.isMaintenance, !1) ? (o(),
-                        }, null, 8, ["info"])) : p("", !0)], 2)]),
-                        }, null, 8, ["info"])) : p("", !0)], 2)]),
-                        }, null, 8, ["info"])) : p("", !0)], 2)]),
-                        }, null, 8, ["play-member"])) : p("", !0)]),
-                        }, void 0, !0) : (o(),
-                        })) : p("", !0), !(e != null && e.isMaintenance) && (e == null ? void 0 : e.playMemberDisplay) && (e == null ? void 0 : e.playMember) ? (o(),
-                        }])
-                        0: {
-                        560: {
-                        580: {
-                        690: {
-                        768: {
-                        class: "!h-[unset]"
-                        class: d(["!h-[136px] md:!h-[244px] md:mb-5", {
-                        const x = JSON.parse(w);
-                        default: L( () => [n("div", {
-                        default: L( () => [n("div", {
-                        default: L( () => [n("div", {
-                        default: L( () => [n("div", {
-                        f(C, {
-                        f(C, {
-                        f(C, {
-                        f(C, {
-                        f(J, {
-                        f(M, {
-                        f(W, {
-                        f(Y, {
-                        grid: {
-                        key: 0
-                        key: 1
-                        key: S
-                        key: S
-                        key: S,
-                        key: S,
-                        return I
-                        return x.min <= x.max ? x : I
+rows: 2
+"card-class": "h-[136px] md:min-h-[244px]",
+"cover-size-class": "h-[110px] w-[110px] md:h-[196px] md:w-[196px]",
+"cover-size-class": "h-[110px] w-[110px] md:h-[196px] md:w-[196px]",
+"cover-size-class": "xl:h-[170px] xl:w-[170px] lg:h-[110px] lg:w-[110px] h-[80px] w-[80px]",
+"icon-size-class-with-time": "md:mt-[40px] mt-[30px]",
+"icon-size-class-with-time": "md:mt-[40px] mt-[30px]",
+"icon-size-class-with-time": "md:mt-[40px] mt-[30px]",
+"icon-size-class-with-time": "mt-[35px]",
+"icon-size-class": "w-6 h-6 md:h-10 md:w-10",
+"icon-size-class": "w-6 h-6 md:h-10 md:w-10",
+"icon-size-class": "w-6 h-6 md:h-10 md:w-10",
+"icon-size-class": "xl:h-10 xl:w-10 lg:w-6 lg:h-6 w-4 h-4",
+"img-url": le(e),
+"is-icon": !0,
+"mb-[6px] sm:mb-2": s(N)
+"platform-name": e.name
+"play-member": e == null ? void 0 : e.playMember
+"text-margin-class": "xl:my-[10px] lg:my-[5px] my-[3px]",
+"text-size-class": "xl:text-[12px] text-[10px]",
+}
+class: "!top-[-15px]"
+class: "absolute md:top-[20px] top-[15px] right-[5px]",
+class: "absolute top-[17px] left-0 rounded-tl-[8px] rounded-br-[8px]"
+class: "xl:!top-[-10px] lg:!top-[-20px] !top-[-15px]"
+class: d(["h-full max-h-[250px]", !le(e) && "min-h-[100px] xl:min-h-[150px]"]),
+class: d(["h-full", [e != null && e.isMaintenance ? "game-blur" : "cursor-pointer"]]),
+class: d(["relative h-full", e != null && e.isMaintenance ? "cursor-not-allowed" : "cursor-pointer"])
+class: d(["w-[110px] md:w-[196px] relative h-full", e != null && e.isMaintenance ? "cursor-not-allowed" : "cursor-pointer"])
+class: d(["w-[110px] md:w-[196px] relative h-full", e != null && e.isMaintenance ? "cursor-not-allowed" : "cursor-pointer"]),
+class: d(["w-full h-full", (e == null ? void 0 : e.isMaintenance) && "game-blur"]),
+class: d(["w-full", [e != null && e.isMaintenance ? "game-blur" : "cursor-pointer"]]),
+class: d([e != null && e.isMaintenance ? "game-blur" : "cursor-pointer"]),
+fill: a
+game: e,
+game: e,
+game: e,
+grid: {
+info: e
+info: e
+info: e,
+info: e,
+item: e
+key: 0,
+key: 0,
+key: 0,
+key: 0,
+key: 0,
+key: 1,
+key: 1,
+key: 1,
+key: 2,
+onClick: Z => s(q)(s(k), e)
+onClick: Z => s(q)(s(k), e)
+onClick: Z => s(q)(s(k), e)
+onClick: Z => we(e)
+ref_for: !0,
+ref_key: "gameItemContainer",
+ref: T
+rounded: "10px",
+rows: C,
+slidesPerView: 3
+slidesPerView: 3,
+slidesPerView: 4
+slidesPerView: 5
+slidesPerView: 6
+spaceBetween: 6,
+_: 2
+_: 2
+_: 2
+_: 2
+...X,
+"bottom-[5px] items-center md:items-baseline": !s(v)
+"h-[191px] sm:h-[272px] md:h-[341px] 2md:h-[244px]": !s(v),
+"is-video": s(v)
+"max-h-[280px] md:max-h-[508px]": !((Se = (Me = a.list) == null ? void 0 : Me[0]) != null && Se.useRecommend) && a.mobileGameNum <= 6,
+"max-h-[479px] sm:max-h-[559px] md:max-h-[869px] 2md:max-h-[508px]": ((Ie = (Ce = a.list) == null ? void 0 : Ce[0]) == null ? void 0 : Ie.type) === "image" && a.mobileGameNum <= 6,
+"mb-2.5 md:w-[calc((100%-32px)/3)]": a.pcPlatformNum > 4
+"md:flex flex-wrap": a.pcPlatformNum > 4
+"md:ml-2.5": a.useSwiper && P(a.prefix)
+"opacity-50 !cursor-not-allowed": be(e)
+"video-image-show-sidebar": s(_),
+"video-name-bar": s(v),
+"video-recommend": ((Te = (ze = a.list) == null ? void 0 : ze[0]) == null ? void 0 : Te.type) === "video" && a.mobileGameNum <= 6
+}
+}
+},
+},
+},
+},
+}, [e ? (o(),
+}, [O(ve, {
+}, [O(ve, {
+}, [s(v).customPlatformCard ? Le(a.$slots, "customPlatformCard", {
+}, null, 8, ["class", "img-url", "platform-name"]))], 10, fa), e != null && e.isMaintenance ? (o(),
+}, null, 8, ["game", "class", "onClick"]), e != null && e.isMaintenance ? (o(),
+}, null, 8, ["game", "class", "onClick"]), e != null && e.isMaintenance ? (o(),
+}, null, 8, ["game", "class", "onClick"])) : p("", !0), e != null && e.isMaintenance ? (o(),
+}, null, 8, ["info"])) : p("", !0), s($)(e.demoSupported, e.isMaintenance, !1) ? (o(),
+}, null, 8, ["info"])) : p("", !0)], 2)]),
+}, null, 8, ["info"])) : p("", !0)], 2)]),
+}, null, 8, ["info"])) : p("", !0)], 2)]),
+}, null, 8, ["play-member"])) : p("", !0)]),
+}, void 0, !0) : (o(),
+})) : p("", !0), !(e != null && e.isMaintenance) && (e == null ? void 0 : e.playMemberDisplay) && (e == null ? void 0 : e.playMember) ? (o(),
+}])
+0: {
+560: {
+580: {
+690: {
+768: {
+class: "!h-[unset]"
+class: d(["!h-[136px] md:!h-[244px] md:mb-5", {
+const x = JSON.parse(w);
+default: L( () => [n("div", {
+default: L( () => [n("div", {
+default: L( () => [n("div", {
+default: L( () => [n("div", {
+f(C, {
+f(C, {
+f(C, {
+f(C, {
+f(J, {
+f(M, {
+f(W, {
+f(Y, {
+grid: {
+key: 0
+key: 1
+key: S
+key: S
+key: S,
+key: S,
+return I
+return x.min <= x.max ? x : I
                         return;
                         slidesPerView: 3
                         slidesPerView: 3
