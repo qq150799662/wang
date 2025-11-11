@@ -1,0 +1,127 @@
+当然有！但是需要先明确一个非常重要的概念：
+
+**“杀毒脚本”并不能替代专业的杀毒软件。**
+
+专业的杀毒软件拥有庞大的、实时更新的病毒特征库、先进的启发式扫描引擎、行为监控、云查杀等多种技术。一个简单的脚本能力有限，通常只能针对**特定的、已知的**威胁进行一些清理和系统修复工作。
+
+下面我为您提供几个不同用途的“安全脚本”示例，您可以根据需要选择。
+
+---
+
+### 1. Windows 系统安全扫描与清理脚本（批处理/PowerShell）
+
+这个脚本的目标是执行一些常见的清理和修复任务，例如扫描并修复系统文件、清理临时文件、检查可疑的启动项等。
+
+**适用场景：** 怀疑电脑中毒后，在进行专业杀毒之前或之后的辅助清理。
+
+```batch
+@echo off
+echo 开始执行系统安全扫描与清理...
+echo.
+
+echo 1. 检查并修复系统文件...
+sfc /scannow
+
+echo.
+echo 2. 运行Windows Defender快速扫描...
+PowerShell -Command "Start-MpScan -ScanType QuickScan"
+
+echo.
+echo 3. 清理系统临时文件...
+PowerShell -Command "Get-ChildItem -Path $env:TEMP, C:\Windows\Temp | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue"
+cleanmgr /sagerun:1
+
+echo.
+echo 4. 检查当前用户启动项...
+echo === 启动文件夹 ===
+dir "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
+echo.
+echo === 注册表启动项 ===
+reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Run"
+
+echo.
+echo 5. 检查系统级启动项（需要管理员权限）...
+reg query "HKLM\Software\Microsoft\Windows\CurrentVersion\Run"
+
+echo.
+echo 操作完成！请注意查看上面的输出是否有可疑项目。
+echo 建议使用专业的杀毒软件进行全盘扫描。
+pause
+```
+
+**使用方法：**
+1. 将上面的代码复制到记事本中。
+2. 另存为 `安全扫描.bat`。
+3. **右键点击该文件，选择“以管理员身份运行”**。
+
+---
+
+### 2. Linux 系统可疑进程与文件查找脚本（Bash）
+
+这个脚本用于在Linux系统上查找一些可疑的迹象，例如异常的网络连接、隐藏进程、SUID/SGID文件等。
+
+**适用场景：** Linux服务器安全巡检或怀疑被入侵后的初步排查。
+
+```bash
+#!/bin/bash
+
+echo "====== Linux 系统安全快速检查 ======"
+echo
+
+echo "1. 检查网络连接..."
+echo "=== ESTABLISHED 连接 ==="
+netstat -tulnp | grep ESTABLISHED
+echo
+
+echo "2. 检查监听端口..."
+echo "=== 所有监听端口 ==="
+netstat -tulnp
+echo
+
+echo "3. 查看CPU/内存占用最高的进程..."
+ps aux --sort=-%cpu | head -10
+echo "---"
+ps aux --sort=-%mem | head -10
+echo
+
+echo "4. 查找具有SUID权限的文件（常见提权点）..."
+find / -perm /4000 -type f 2>/dev/null
+echo
+
+echo "5. 查找具有SGID权限的文件..."
+find / -perm /2000 -type f 2>/dev/null
+echo
+
+echo "6. 查找所有 .ssh 目录和 authorized_keys 文件..."
+find / -name ".ssh" -type d 2>/dev/null
+find / -name "authorized_keys" 2>/dev/null
+echo
+
+echo "7. 检查计划任务..."
+echo "=== 系统级 ==="
+ls -la /etc/cron.*/*
+echo "=== 用户级 ==="
+for user in $(cut -f1 -d: /etc/passwd); do crontab -l -u $user 2>/dev/null; done
+echo
+
+echo "检查完成。请仔细分析以上输出，对于不熟悉的进程、端口和文件需要特别警惕。"
+```
+
+**使用方法：**
+1. 将代码保存为 `security_check.sh`。
+2. 赋予执行权限：`chmod +x security_check.sh`。
+3. 以root权限运行：`sudo ./security_check.sh`。
+
+---
+
+### **重要警告和建议**
+
+1.  **脚本的局限性**：这些脚本主要用于**辅助**检查和清理，它们无法检测到复杂的、新型的或变种的恶意软件。
+2.  **误报风险**：脚本可能会列出一些您不熟悉但却是正常的系统进程或文件，在删除任何东西之前请务必确认。
+3.  **首选专业工具**：
+    *   **Windows**： 使用内置的 **Windows Security**，或者知名的第三方杀毒软件如 Malwarebytes, Kaspersky, Norton 等。
+    *   **Linux**： 使用专业的扫描工具如 `ClamAV`, `rkhunter`, `chkrootkit`。
+    *   **macOS**： 使用 XProtect，或者知名的第三方软件如 Malwarebytes for Mac。
+4.  **预防胜于治疗**：保持良好的上网习惯，不点击可疑链接，不安装来源不明的软件，定期更新系统和软件补丁。
+
+**总结：** 您可以使用上述脚本作为初步的安全自查工具，但如果真的怀疑电脑中毒，请务必使用专业的、更新到最新病毒库的杀毒软件进行全盘扫描。
